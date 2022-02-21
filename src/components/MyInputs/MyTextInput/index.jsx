@@ -13,7 +13,7 @@ export const MyTextInput = (props) => {
   const styles = makeStyles(colors);
 
   return (
-    <View style={styles.formControl}>
+    <View style={styles.wrapper}>
       <Text style={styles.label}>{label && label}</Text>
       <TextInput style={styles.input} {...props} />
       {errorText && touched && (
@@ -27,7 +27,7 @@ export const MyTextInput = (props) => {
 
 const makeStyles = (colors) =>
   StyleSheet.create({
-    formControl: {
+    wrapper: {
       width: "100%",
     },
     label: {

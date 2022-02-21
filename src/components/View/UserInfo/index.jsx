@@ -11,33 +11,31 @@ export const UserInfo = (props) => {
   const styles = makeStyles(colors);
 
   return (
-    <View style={styles.headerTextContainer}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>{name}</Text>
+    <View style={styles.textContainer}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Name: {name}</Text>
       </View>
-      <Text style={{ ...styles.headerText, ...styles.headerAmount }}>
-        {balance}
-      </Text>
+      <Text style={{ ...styles.text, ...styles.amount }}>PW: {balance}</Text>
     </View>
   );
 };
 
 const makeStyles = (colors) =>
   StyleSheet.create({
-    headerContainer: {
+    container: {
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
     },
-    headerTextContainer: {
+    textContainer: {
       paddingRight: 20,
     },
-    headerText: {
+    text: {
       color: colors.BLACK,
       fontFamily: "open-regular",
       fontSize: 20,
     },
-    headerAmount: {
+    amount: {
       paddingLeft: 30,
     },
   });
